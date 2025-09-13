@@ -20,14 +20,48 @@
         .dp:hover {
             color: rgb(67, 67, 245);
         }
+
+         @media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	    }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-end.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            .carousel-inner .carousel-item-start.active, 
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+
+        .carousel-inner .carousel-item-end,
+        .carousel-inner .carousel-item-start { 
+            transform: translateX(0);
+        }
    </style>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row p-2">
-            <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+        <div class="row">
+            <nav class="navbar navbar-expand-sm navbar-light">
                 <!-- FK LOGO -->
-                <div class="col col-md-2 bg"><img src="images\flipcart_logo.svg" title="Flipkart">
+                <div class="col col-md-2"><img src="images\flipcart_logo.svg" title="Flipkart">
                     <button type="button" class="navbar-toggler float-start" data-bs-toggle="collapse" data-bs-target="#navbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -40,7 +74,7 @@
                         </form>
                     </div> 
                     <!-- LOGIN -->
-                     <div class="col col-md-1 ms-md-4">
+                    <div class="col col-md-1 ms-md-4">
                         <div class="dropdown" title=" Login">
                             <button type="button" class="btn  dropdown-toggle icon-hover" data-bs-toggle="dropdown">
                                 <i class="fa-regular fa-circle-user icon-hover"></i>
@@ -219,7 +253,7 @@
     </div>
 
     <!-- CAROUSEL SECTION -->
-    <div class="container-fluid">
+    <div class="container-fluid bg-secondary-subtle">
         <div class="row">
             <div class="col">
                 <div id="mycarousel" class="carousel slider" data-bs-ride="carousel">
@@ -231,7 +265,7 @@
                         <li data-bs-target="#mycarousel" data-bs-slide-to="4"></li>
                         <li data-bs-target="#mycarousel" data-bs-slide-to="5"></li>
                     </ol>
-                    <!-- img.... -->
+                    <!--  carousel img.... -->
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="2000">
                             <img src="images\slider_01.webp" class="d-block w-100" style="height: 200px;">
@@ -252,7 +286,7 @@
                             <img src="images\slider_06.webp" class="d-block w-100" style="height: 200px;">
                         </div>
                     </div>
-                    <!-- btn -->
+                    <!-- btn for slide-->
                     <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
@@ -264,8 +298,245 @@
         </div>
     </div>
 
+    <!-- TOP DEAL CAROUSEL -->
+    <div class="container-fluid  mt-3 pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
+        <div class="row mx-auto my-auto justify-content-center bg-white">
+            <h4 style="padding: 20px;">Top Deals</h4>
+            <div id="topdealcarousel" class="carousel  carousel_01 slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox" style="outline: none;">
+					<div class="carousel-item active">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5">
+									<img src="images\top_deal_01.webp" class="img-fluid" height="100px" width="90px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fans & Geysers</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>999</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-5">
+									<img src="images\top_deal_02.webp" class="img-fluid" height="100px" width="100px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Home Essentials</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Shop Now!</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-4">
+									<img src="images\top_deal_03.webp" class="img-fluid" height="100px" width="150px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Projector</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>6990</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-5">
+									<img src="images\top_deal_04.webp" class="img-fluid" height="100px" width="50px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Best Selling Mobile..</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>499*</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-3">
+									<img src="images\top_deal_05.webp" class="img-fluid" height="100px" width="170px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>6599</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-4">
+									<img src="images\top_deal_06.webp" class="img-fluid" height="100px" width="130px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fastrack Smartwatch..</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>1,399</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+                    <div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-3">
+									<img src="images\top_deal_07.webp" class="img-fluid" height="100px" width="170px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>7949</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#topdealcarousel" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#topdealcarousel" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+        </div>
+    </div>
+
+        <!-- TYOHAAR TRENDS CAROUSEL -->
+    <div class="container-fluid  pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
+        <div class="row mx-auto my-auto justify-content-center bg-white">
+            <h4 style="padding: 20px;">Tyohaar Trends</h4>
+            <div id="tyoharcarousel" class="carousel  carousel_01 slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox" style="outline: none;">
+					<div class="carousel-item active">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5">
+									<img src="images\tyohar_01.webp" class="img-fluid" height="100px" width="90px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fans & Geysers</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>999</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-5">
+									<img src="images\tyohar_02.webp" class="img-fluid" height="100px" width="100px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Home Essentials</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Shop Now!</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-4">
+									<img src="images\tyohar_03.webp" class="img-fluid" height="100px" width="150px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Projector</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>6990</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-5">
+									<img src="images\tyohar_04.webp" class="img-fluid" height="100px" width="50px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Best Selling Mobile..</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>499*</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-3">
+									<img src="images\tyohar_05.webp" class="img-fluid" height="100px" width="170px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>6599</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-4">
+									<img src="images\tyohar_06.webp" class="img-fluid" height="100px" width="130px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fastrack Smartwatch..</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>1,399</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+                    <div class="carousel-item">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img  ms-3">
+									<img src="images\tyohar_07.webp" class="img-fluid" height="100px" width="170px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>7949</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#tyoharcarousel" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#tyoharcarousel" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+        </div>
+    </div>
+
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+<script>
+    let items = document.querySelectorAll('.carousel_01 .carousel-item')
+
+		items.forEach((el) => {
+			const minPerSlide =6
+			let next = el.nextElementSibling
+			for (var i=1; i<minPerSlide; i++) {
+				if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+    })
+</script>
     
 </body>
 </html>
