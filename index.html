@@ -55,8 +55,9 @@
             transform: translateX(0);
         }
 
+        /* btn for slider */
         .carousel-control-prev-icon,.carousel-control-next-icon {
-            background-color: rgb(100, 100, 100);
+            background-color: rgb(203, 200, 200);
             height: 80px;
             width: 50px;
             border-radius: 3px;  
@@ -64,15 +65,40 @@
             color: yellowgreen;
         }
 
+        .carousel-control-prev {
+            width: 80px;    
+            /* float: left; */
+            margin-left: -12px;
+        }
+
+        .carousel-control-next {
+            width: 80px;    
+            margin-right: -12px;
+        }
+
+        /* img hover */
+        .img_hover {
+	        transition: .2s ease-in-out;
+        }
+
+        .img_hover:hover {
+	       transform: scale(1.08);
+        }
+
+
         /* footer */
         .fotr_link {
             text-decoration: none;
             color: white;
             font-size: 13px;
         }
-
         .fotr_link:hover {
             text-decoration: underline;
+        }
+
+
+        @media screen and (max-width:1200px) {
+            .last_img{display: none;}
         }
    </style>
 </head>
@@ -145,11 +171,11 @@
                     </div>
                     <!-- MORE HELP DD -->
                     <div class="col col-md-1 ms-md-1">
-                        <div class="dropdown" title="Dropdown with more help">
+                        <div class="dropdown dropstart" title="Dropdown with more help">
                             <button type="button" class="btn" data-bs-toggle="dropdown">
                             <a href="#" style="text-decoration: none; color: black;"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-md-start">
+                            <ul class="dropdown-menu">
                                 <li class="d-flex p-2">
                                     <i class="fa-regular fa-bell mt-2"></i>
                                     <a href="#" class="dropdown-item">Notification Preferences</a>
@@ -173,6 +199,7 @@
             </nav>
         </div>
     </div>
+
 
     <!-- CATOGRIES -->
     <div class="container-fluid mt-2 pt-4 pt-md-2 pb-3 ps-4 pe-4 bg-secondary-subtle">
@@ -199,7 +226,7 @@
                         <li><a href="#" class="dropdown-item">Kids</a></li>
                         <li><a href="#" class="dropdown-item">Essentials</a></li>
                         <li><a href="#" class="dropdown-item">Winter</a></li>
-                    </ul>
+                    </ul>   
                 </div>   
             </div>
             <div class="col col-md-1 ps-3">
@@ -272,6 +299,7 @@
         </div>
     </div>
 
+
     <!-- CAROUSEL SECTION -->
     <div class="container-fluid bg-secondary-subtle">
         <div class="row">
@@ -318,6 +346,7 @@
         </div>
     </div>
 
+
     <!-- TOP DEAL CAROUSEL -->
     <div class="container-fluid  mt-3 pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
         <div class="row mx-auto my-auto justify-content-center bg-white">
@@ -327,8 +356,8 @@
 					<div class="carousel-item active">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img ms-5">
-									<img src="images\top_deal_01.webp" class="img-fluid" height="100px" width="90px">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\top_deal_01.webp" class="img-fluid img_hover" height="100px" width="90px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fans & Geysers</a><br>
@@ -340,8 +369,8 @@
 					<div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-5">
-									<img src="images\top_deal_02.webp" class="img-fluid" height="100px" width="100px">
+								<div class="card-img  ms-5 pt-2">
+									<img src="images\top_deal_02.webp" class="img-fluid img_hover" height="100px" width="100px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Home Essentials</a><br>
@@ -353,8 +382,8 @@
 					<div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-4">
-									<img src="images\top_deal_03.webp" class="img-fluid" height="100px" width="150px">
+								<div class="card-img ms-4 pt-2">
+									<img src="images\top_deal_03.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Projector</a><br>
@@ -366,8 +395,8 @@
 					<div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-5">
-									<img src="images\top_deal_04.webp" class="img-fluid" height="100px" width="50px">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\top_deal_04.webp" class="img-fluid img_hover" height="100px" width="50px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Best Selling Mobile..</a><br>
@@ -379,8 +408,8 @@
 					<div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-3">
-									<img src="images\top_deal_05.webp" class="img-fluid" height="100px" width="170px">
+								<div class="card-img ms-3 pt-2">
+									<img src="images\top_deal_05.webp" class="img-fluid img_hover" height="100px" width="170px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
@@ -392,8 +421,8 @@
 					<div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-4">
-									<img src="images\top_deal_06.webp" class="img-fluid" height="100px" width="130px">
+								<div class="card-img ms-4 pt-2">
+									<img src="images\top_deal_06.webp" class="img-fluid img_hover" height="100px" width="130px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Fastrack Smartwatch..</a><br>
@@ -405,8 +434,8 @@
                     <div class="carousel-item">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-3">
-									<img src="images\top_deal_07.webp" class="img-fluid" height="100px" width="170px">
+								<div class="card-img ms-3 pt-2">
+									<img src="images\top_deal_07.webp" class="img-fluid img_hover" height="100px" width="170px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Monitors</a><br>
@@ -427,6 +456,7 @@
         </div>
     </div>
 
+
     <!-- TYOHAAR TRENDS CAROUSEL -->
     <div class="container-fluid  pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
         <div class="row mx-auto my-auto justify-content-center bg-white">
@@ -436,8 +466,8 @@
 					<div class="carousel-item carousel-item_02 active">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img ms-5 mt-3">
-									<img src="images\tyohar_01.webp" class="img-fluid" height="100px" width="120px">
+								<div class="card-img ms-5 mt-3 pt-2">
+									<img src="images\tyohar_01.webp" class="img-fluid img_hover" height="100px" width="120px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">PUMA, ADIDAS...</a><br>
@@ -449,8 +479,8 @@
 					<div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-4 mt-3">
-									<img src="images\tyohar_02.webp" class="img-fluid" height="100px" width="150px">
+								<div class="card-img ms-4 mt-3 pt-2">
+									<img src="images\tyohar_02.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">puzzle Games!</a><br>
@@ -462,8 +492,8 @@
 					<div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-4 mt-1">
-									<img src="images\tyohar_03.webp" class="img-fluid" height="100px" width="150px">
+								<div class="card-img ms-4 mt-1 pt-2">
+									<img src="images\tyohar_03.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Top Selling Stationery</a><br>
@@ -475,8 +505,8 @@
 					<div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-4 mt-3">
-									<img src="images\tyohar_04.webp" class="img-fluid" height="100px" width="150px">
+								<div class="card-img ms-4 mt-3 pt-2">
+									<img src="images\tyohar_04.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Remote control Toys</a><br>
@@ -488,8 +518,8 @@
 					<div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-5 mt-3">
-									<img src="images\tyohar_05.webp" class="img-fluid" height="100px" width="140px">
+								<div class="card-img ms-5 mt-3 pt-2">
+									<img src="images\tyohar_05.webp" class="img-fluid img_hover" height="100px" width="140px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Toys and Games!</a><br>
@@ -501,8 +531,8 @@
 					<div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-5">
-									<img src="images\tyohar_06.webp" class="img-fluid" height="100px" width="80px">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\tyohar_06.webp" class="img-fluid img_hover" height="100px" width="80px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Coffee Powder</a><br>
@@ -514,8 +544,8 @@
                     <div class="carousel-item carousel-item_02">
 						<div class="col-md-2">
 							<div class="card border-0">
-								<div class="card-img  ms-3">
-									<img src="images\tyohar_07.webp" class="img-fluid" height="100px" width="120px">
+								<div class="card-img ms-3 pt-2">
+									<img src="images\tyohar_07.webp" class="img-fluid img_hover" height="100px" width="120px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Best of Action Toys</a><br>
@@ -536,6 +566,7 @@
         </div>
     </div>
 
+
     <!-- LIFE STYLE CAROUSEL -->
     <div class="container-fluid  pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
         <div class="row mx-auto my-auto justify-content-center bg-white">
@@ -546,7 +577,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img ms-5 mt-3">
-									<img src="images\life_sty_01.webp" class="img-fluid" height="100px" width="150px">
+									<img src="images\life_sty_01.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Stylish picks!</a><br>
@@ -559,7 +590,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-4 mt-3">
-									<img src="images\life_sty_02.webp" class="img-fluid" height="100px" width="150px">
+									<img src="images\life_sty_02.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Echowear!</a><br>
@@ -572,7 +603,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-4 mt-3">
-									<img src="images\life_sty_03.webp" class="img-fluid" height="100px" width="125px">
+									<img src="images\life_sty_03.webp" class="img-fluid img_hover" height="100px" width="125px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Trendy jewellery</a><br>
@@ -585,7 +616,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-5 mt-3">
-									<img src="images\life_sty_04.webp" class="img-fluid" height="100px" width="150px">
+									<img src="images\life_sty_04.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Celestial Vibes</a><br>
@@ -598,7 +629,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-5 mt-3">
-									<img src="images\life_sty_05.webp" class="img-fluid" height="100px" width="130px">
+									<img src="images\life_sty_05.webp" class="img-fluid img_hover" height="100px" width="130px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">inc.5, Carlton Londo...</a><br>
@@ -611,7 +642,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-5 mt-3">
-									<img src="images\life_sty_06.webp" class="img-fluid" height="100px" width="150px">
+									<img src="images\life_sty_06.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Cool lewks</a><br>
@@ -624,7 +655,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-3 mt-3">
-									<img src="images\life_sty_07.webp" class="img-fluid" height="100px" width="150px">
+									<img src="images\life_sty_07.webp" class="img-fluid img_hover" height="100px" width="150px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Step in style</a><br>
@@ -637,7 +668,7 @@
 						<div class="col-md-2">
 							<div class="card border-0">
 								<div class="card-img  ms-4 mt-3">
-									<img src="images\life_sty_08.webp" class="img-fluid" height="100px" width="110px">
+									<img src="images\life_sty_08.webp" class="img-fluid img_hover" height="100px" width="110px">
 								</div>
 								<div class="card-body" style="text-align: center;">
                                     <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Kurta sets..</a><br>
@@ -658,15 +689,16 @@
         </div>
     </div>
 
+
     <!-- HOME STYLE + NAVRATRI SPECIALS + SEASONS TOP -->
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid bg-secondary-subtle">
+        <div class="row mb-1 ms-1">
             <div class="col col-md-4 bg-secondary-subtle pe-4">
                 <div class="row bg-white">
                     <h4>Make your home stylish</h4>
                     <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\home_sty_01.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\home_sty_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Home Temple <h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -674,7 +706,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\home_sty_02.webp" class="ms-3  mt-3" height="130px" width="150px">
+                            <img src="images\home_sty_02.webp" class="ms-3  mt-3 img_hover" height="130px" width="150px">
                             <div class="card-body">
                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Wardrobes<h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -682,7 +714,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\home_sty_03.webp" class="ms-3  mt-3" height="130px" width="140px">
+                            <img src="images\home_sty_03.webp" class="ms-3  mt-3 img_hover" height="130px" width="140px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Stand <h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -690,7 +722,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\home_sty_04.webp" class="ms-3  mt-3" height="130px" width="140px">
+                            <img src="images\home_sty_04.webp" class="ms-3  mt-3 img_hover" height="130px" width="140px">
                             <div class="card-body">
                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Beds <h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -704,7 +736,7 @@
                     <h4>Navaratri Specials</h4>
                     <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\navratri_01.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\navratri_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Dry Fruit, Nut <h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -712,7 +744,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\navratri_02.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\navratri_02.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's Kurtas<h6 style="color: green;">Popular</h6></a>
                             </div>
@@ -720,7 +752,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\navratri_03.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\navratri_03.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Jewellery<h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -728,7 +760,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\navratri_04.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\navratri_04.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Sweets<h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -742,7 +774,7 @@
                     <h4>Season's Top Picks</h4>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\deal_02.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\deal_02.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Wrist Watches <h6 style="color: green;">Min. 90% Off</h6></a>
                             </div>
@@ -750,7 +782,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\deal_03.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\deal_03.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's Slippers <h6 style="color: green;">Min. 90% Off</h6></a>
                             </div>
@@ -758,7 +790,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\deal_04.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\deal_04.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's T-shirt <h6 style="color: green;">Min. 50% Off</h6></a>
                             </div>
@@ -766,7 +798,7 @@
                    </div>
                    <div class="col-md-6">
                         <div class="card mt-2" style="height: 220px;">
-                            <img src="images\deal_01.webp" class="ms-4 mt-3" height="130px" width="130px">
+                            <img src="images\deal_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
                             <div class="card-body">
                                 <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Laptop Bags <h6 style="color: green;">Min. 70% Off</h6></a>
                             </div>
@@ -776,6 +808,235 @@
             </div>
         </div>
     </div>
+
+
+    <!-- FOOD DEALS -->
+    <div class="container-fluid  mt-3 pt-4 pt-md-2 pb-1 ps-3 pe-3 bg-secondary-subtle">
+        <div class="row mx-auto my-auto justify-content-center bg-white">
+            <h4 style="padding: 20px;">Food Deals</h4>
+            <div id="fooddeal" class="carousel  carousel_04 slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox" style="outline: none;">
+					<div class="carousel-item carousel-item_04 active">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\healthc_01.webp" class="img-fluid img_hover" height="150px" width="100px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Food Spreads</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 75% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\healthc_02.webp" class="img-fluid img_hover" height="150px" width="100px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Honey</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 75% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-4 pt-2">
+									<img src="images\healthc_03.webp" class="img-fluid img_hover" height="150px" width="115px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Musical Toys</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Under<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;font-size: 13px;"></i>199</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\healthc_04.webp" class="img-fluid img_hover" height="150px" width="75px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Tea Powder</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 75% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\healthc_05.webp" class="img-fluid img_hover" height="150px" width="55px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Breakfast Cereal</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 75% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-4 pt-2">
+									<img src="images\healthc_06.webp" class="img-fluid img_hover" height="150px" width="130px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Learning & Education...</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 85% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+                    <div class="carousel-item carousel-item_04">
+						<div class="col-md-2">
+							<div class="card border-0">
+								<div class="card-img ms-5 pt-2">
+									<img src="images\healthc_07.webp" class="img-fluid img_hover" height="150px" width="90px">
+								</div>
+								<div class="card-body" style="text-align: center;">
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Dry Fruits</a><br>
+                                    <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;font-weight: 650;">Upto 75% Off</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#fooddeal" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#fooddeal" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+        </div>
+    </div>
+
+    <!-- HOME DECOR + TRENDING GADGETS + HAIR SKIN -->
+    <!-- <div class="container-fluid bg-secondary-subtle">
+        <div class="row mb-1 ms-1">
+            <div class="col col-md-4 bg-secondary-subtle pe-4">
+                <div class="row bg-white">
+                    <h4>Make your home stylish</h4>
+                    <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\home_sty_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Home Temple <h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\home_sty_02.webp" class="ms-3  mt-3 img_hover" height="130px" width="150px">
+                            <div class="card-body">
+                               <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Wardrobes<h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\home_sty_03.webp" class="ms-3  mt-3 img_hover" height="130px" width="140px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Stand <h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\home_sty_04.webp" class="ms-3  mt-3 img_hover" height="130px" width="140px">
+                            <div class="card-body">
+                               <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Beds <h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+
+            <div class="col col-md-4 bg-secondary-subtle pe-4">
+                <div class="row bg-white">
+                    <h4>Navaratri Specials</h4>
+                    <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\navratri_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                               <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Dry Fruit, Nut <h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\navratri_02.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's Kurtas<h6 style="color: green;">Popular</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\navratri_03.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Jewellery<h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\navratri_04.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                               <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Sweets<h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+
+            <div class="col col-md-4 bg-secondary-subtle pe-4">
+                <div class="row bg-white">
+                    <h4>Season's Top Picks</h4>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\deal_02.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                               <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Wrist Watches <h6 style="color: green;">Min. 90% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\deal_03.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's Slippers <h6 style="color: green;">Min. 90% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\deal_04.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Men's T-shirt <h6 style="color: green;">Min. 50% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-6">
+                        <div class="card mt-2" style="height: 220px;">
+                            <img src="images\deal_01.webp" class="ms-4 mt-3 img_hover" height="130px" width="130px">
+                            <div class="card-body">
+                                <a href="#" class="card-link" style="text-decoration: none; color: black; font-size: 15px;">Laptop Bags <h6 style="color: green;">Min. 70% Off</h6></a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
     <!-- FOOTER SECTION -->
@@ -839,6 +1100,7 @@
         </div>
     </div>
 
+    <!-- FOOTER LAST SECTION -->
     <div class="container-fluid">
         <div class="row bg-dark p-5">
             <div class="col col-md-2">
@@ -861,71 +1123,93 @@
                 <i class="fa-solid fa-copyright" style="color: white;"></i>
                 <a href="#" style="text-decoration: none; color: white;font-size: 13px;">2007-2025 Flipkart.com</a>
             </div>
-            <div class="col col-md-3">
+            <div class="col col-md-3 last_img">
                 <img src="images\footer_payment_method.svg">    
             </div>  
         </div>
     </div>
-    
 
 
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <!-- MAIN SCRIPT FOR CAROUSEL -->
+    <script>
+        let items = document.querySelectorAll('.carousel_01 .carousel-item')
 
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-
-<script>
-    let items = document.querySelectorAll('.carousel_01 .carousel-item')
-
-		items.forEach((el) => {
-			const minPerSlide =6
-			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
-				if (!next) {
-            // wrap carousel by using first child
-            next = items[0]
+            items.forEach((el) => {
+                const minPerSlide =6
+                let next = el.nextElementSibling
+                for (var i=1; i<minPerSlide; i++) {
+                    if (!next) {
+                // wrap carousel by using first child
+                next = items[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-    })
-</script>
-<script>
-    let items2 = document.querySelectorAll('.carousel_02 .carousel-item_02')
+        })
+    </script>
 
-		items2.forEach((el) => {
-			const minPerSlide =6
-			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
-				if (!next) {
-            // wrap carousel by using first child
-            next = items2[0]
-        }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-    })
-</script>
-<script>
-    let items3 = document.querySelectorAll('.carousel_03 .carousel-item_03')
+    <!--  FOR TYOHAAR TRENDS  -->
+    <script>
+        let items2 = document.querySelectorAll('.carousel_02 .carousel-item_02')
 
-		items3.forEach((el) => {
-			const minPerSlide =6
-			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
-				if (!next) {
-            // wrap carousel by using first child
-            next = items3[0]
+            items2.forEach((el) => {
+                const minPerSlide =6
+                let next = el.nextElementSibling
+                for (var i=1; i<minPerSlide; i++) {
+                    if (!next) {
+                // wrap carousel by using first child
+                next = items2[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-    })
-</script>
+        })
+    </script>
+
+
+    <!--  FOR LIFE STYLE -->
+    <script>
+        let items3 = document.querySelectorAll('.carousel_03 .carousel-item_03')
+
+            items3.forEach((el) => {
+                const minPerSlide =6
+                let next = el.nextElementSibling
+                for (var i=1; i<minPerSlide; i++) {
+                    if (!next) {
+                // wrap carousel by using first child
+                next = items3[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+        })
+    </script>
+
+
+    <!-- FOR FOOD DEAL -->
+    <script>
+        let items4 = document.querySelectorAll('.carousel_04 .carousel-item_04')
+
+            items4.forEach((el) => {
+                const minPerSlide =6
+                let next = el.nextElementSibling
+                for (var i=1; i<minPerSlide; i++) {
+                    if (!next) {
+                // wrap carousel by using first child
+                next = items4[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+        })
+    </script>
     
 </body>
 </html>

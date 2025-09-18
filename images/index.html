@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .icon-hover:hover {
+                background-color: rgb(64, 87, 237);
+                color:white;
+                border: none;
+            } 
+            .btn {
+                border: none;
+            }
+
+            @media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+       </style>
+    </head>
+    <body>
+        <div class="container-fluid bg-secondary-subtle p-3">
+            <div class="row">
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <!-- FK LOGO -->
+                    <div class="col col-md-2 bg"><img src="images\flipcart_logo.svg">
+                        <button type="button" class="navbar-toggler float-start" data-bs-toggle="collapse" data-bs-target="#navbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- NAV SRECTION -->
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <!-- SEARCH BAR -->
+                        <div class="col col-md-5">
+                            <form role="search">   
+                                <input class="form-control m-2" type="search" placeholder="Seacrch for Products,Brands and More" aria-label="search">
+                            </form>
+                        </div> 
+                        <!-- LOGIN -->
+                        <div class="col col-md-1 ms-md-5">
+                            <div class="dropdown">
+                               <button type="button" class="btn  dropdown-toggle icon-hover" data-bs-toggle="dropdown">
+                                    <i class="fa-regular fa-circle-user icon-hover"></i>
+                                    Login
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="d-flex">
+                                        <a href="#" class="dropdown-item">New Customer?</a> <a href="#" class="dropdown-item" style="color: rgb(64, 64, 237);"><b>Sign Up</b></a>
+                                    </li><hr>
+                                    <li class="d-flex ps-2">
+                                        <i class="fa-regular fa-circle-user icon-hover mt-2"></i><a href="#" class="dropdown-item">My Profile</a>
+                                    </li>
+                                    <li class="d-flex p-2">
+                                        <i class="fa-solid fa-square-poll-horizontal mt-2"></i><a href="#" class="dropdown-item">Flipkart plus Zone</a>
+                                    </li>
+                                    <li class="d-flex p-2">
+                                        <i class="fa-solid fa-cube mt-2"></i>
+                                        <a href="#" class="dropdown-item">Orders</a>
+                                    </li>
+                                    <li class="d-flex p-2">
+                                        <i class="fa-regular fa-heart mt-2"></i>
+                                        <a href="#" class="dropdown-item">Wishlist</a>
+                                    </li>
+                                    <li class="d-flex ps-2">
+                                        <i class="fa-solid fa-gift mt-2"></i>
+                                        <a href="#" class="dropdown-item">Rewards</a>
+                                    </li>
+                                    <li class="d-flex p-2">
+                                        <i class="fa-regular fa-credit-card mt-2"></i>
+                                        <a href="#" class="dropdown-item">Gift Cards</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- CART -->
+                        <div class="col col-md-1 ms-md-3">
+                            <ul class="navbar-nav me-auto d-flex" title="Cart">
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping" style="color: #707275;"></i>cart</a></li>   
+                            </ul>
+                        </div>
+                        <!-- SELLER -->
+                        <div class="col col-md-2 ms-md-1">
+                            <ul class="navbar-nav me-auto d-flex" title="Become a Seller">
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-house" style="color: #707275;"></i>Become a Seller</a></li>
+                            </ul>
+                        </div>
+                        <!-- MORE HELP DD -->
+                        <div class="col col-md-1">    
+                            <ul class="navbar-nav me-auto d-flex" title="Dropdown with more help">
+                                <li class="nav-item dropdown" type="button">
+                                    <a href="#" class="nav-link dropdown-toggle ms-4" role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Notification Preferences</a></li>
+                                        <li><a href="#" class="dropdown-item">24x7 Customer Care</a></li>
+                                        <l><a href="#" class="dropdown-item">Advertise</a></li>
+                                        <l><a href="#" class="dropdown-item">Download App</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>  
+            </div>
+        </div>
+
+
+        <!-- CATOGRIES -->
+        <div class="container-fluid mt-5 p-4 bg-secondary-subtle">
+            <div class="row justift-content-center p-2">
+                <div class="col col-md-1.3">
+                    <a href="#" style="text-decoration: none; color: black;"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e00302d428f5c7be.png?q=100">Minutes</a>
+                </div>
+                <div class="col col-md-1.3">
+                    <a href="#" style="text-decoration: none; color: black;"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100">Mobile & Tablets</a>
+                </div>
+                <div class="col col-md-1.3">
+                    <a href="#"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/ff559cb9d803d424.png?q=100"></a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Fashion</a>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex"><a href="#" class="dropdown-item">Men's Top Wear</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Men's Bottom Wear</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Women Ethnic</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Men's Footwear</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Women Footwear</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Watches and Accessories</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Women's western</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Bags S & Luggage</a></li>
+                             <li class="d-flex"><a href="#" class="dropdown-item">Kids</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Essentials</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Winter</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col col-md-1.3">
+                    <a href="#"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/af646c36d74c4be9.png?q=100"></a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Electronics</a>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex"><a href="#" class="dropdown-item">Electronics GST Store</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Cameras & Accessories</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Computer Peripherals</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Gaming</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Health & Personal Care</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Laptop Accessories</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Laptop and Desktop</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">MobileAccessories</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Powerbank</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Smart Home automation</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Smart Wearables</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Storage</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Tablets</a></li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="col col-md-1.3">
+                    <a href="#"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100"></a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Home & Furniture</a>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex"><a href="#" class="dropdown-item">Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Living Room Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Kitchen & Dining</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Bedroom Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Space Saving Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Home Decor</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Tools & Utillity</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Work Space Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Kids Furniture</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Lightings & Electricals</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Cleaning & Bath</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Pet & gardening</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col col-md-1 ps-3">
+                    <a href="#" style="text-decoration: none; color: black;"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100">TVs & Appliances</a>
+                </div>
+                <div class="col col-md-1.1 pe-5">
+                    <a href="#" style="text-decoration: none; color: black;"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/3c647c2e0d937dc5.png?q=100">Flight Bookings</a>
+                </div>
+                <div class="col col-md-1.3">
+                    <a href="#"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/b3020c99672953b9.png?q=100"></a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Beauty,Food..</a>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex"><a href="#" class="dropdown-item">Orders</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Wishlist</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Rewards</a></li>
+                            <li class="d-flex"><a href="#" class="dropdown-item">Gift Cards</a></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="col col-md-1.3"><a href="#" style="text-decoration: none; color: black;"><img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e730a834ad950bae.png?q=100">Grocery</a></div>
+            </div>
+        </div>
+
+        <div class="container text-center my-3">
+		<div class="row mx-auto my-auto justify-content-center">
+			<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+                                    <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e00302d428f5c7be.png?q=100" style="height: 130px;" class="img-fluid">
+									<!-- <img src="images\fashion_deal_01.webp" class="img-fluid" height="50px"> -->
+								</div>
+								<div class="card-img-overlay">Slide 1</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images\monitors_01.webp" class="img-fluid" height="50px">
+								</div>
+								<div class="card-img-overlay">Slide 2</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images\printer.webp" class="img-fluid" height="50px">
+								</div>
+								<div class="card-img-overlay">Slide 3</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images\smart_watch" class="img-fluid" height="50px">
+								</div>
+								<div class="card-img-overlay">Slide 4</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images\smart_watch.webp" class="img-fluid" height="50px">
+								</div>
+								<div class="card-img-overlay">Slide 5</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images\printer.webp" class="img-fluid" height="50px">
+								</div>
+								<div class="card-img-overlay">Slide 6</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+		</div>		
+	</div>
+
+
+        <!-- BANNER SECTION -->
+        <!-- <div class="container-fluid" style="height: 150px; width: 100%;">
+            <div class="row justift-content-center">
+              <img src="images\banner_01.webp" style="position: absolute;">
+                <div class="col-md-1 bg-warning float-start m-3 h-25" style="position: relative;">
+                  <i class="fa-solid fa-chevron-right fa-flip-horizontal me-0 h-50"></i>
+                </div>
+                <div class="col-md-1 bg-warning float-end h-100" style="position: relativ02">
+                   <i class="fa-solid fa-chevron-right ms-0 h-50"></i>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- BEST OF ELECTRONICS -->
+        <!-- <div class="container-fluid mt-5 py-3 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Best of Electronics</h4>
+                <div class="col col-md-10 mt-5">
+                   <div class="row">
+                        <div class="col col-md-2">
+                            <a href="#"><img src="images\projector.webp" style="height: 130px;"><p style="text-align: center;">Projector</p><h6 style="text-align: center;">From<i class="fa-solid fa-indian-rupee-sign" style="color: #323232;"></i>6990</h6></a>
+                        </div>
+                        <div class="col col-md-3">
+                            <a href="#"><img src="images\monitors_01.webp" style="height: 130px;"><p>monitors</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>8279</h6></a>
+                        </div>
+                        <div class="col col-md-1.5">
+                            <a href="#"><img src="images\nord-buds.webp" style="height: 130px;"><p>Best Truewireles</p><h6>Grab Now</h6></a>
+                        </div>
+                        <div class="col col-md-3">
+                            <a href="#"><img src="images\printer.webp" style="height: 125px;"><p>Printers</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>7949</h6></a>
+                        </div>
+                        <div class="col col-md-2">
+                            <a href="#"><img src="images\smart_watch.webp" style="height: 130px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a>
+                        </div>
+                   </div>
+                </div>
+                <div class="col col-md-2 bg-secondary-subtle">
+                    <a href="#" ><img src="images\flight_booking.png" style="height: 320px; width: 195px;"></a>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- BEAUTY + TOY + FOOD  -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Beauty, Food, Toy & more</h4>
+                <div class="col-md-2">
+                    <a href="#"><img src="images\coffee.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Coffee Powder</p><h6 style="text-align: center;">Upto 80% Off</h6></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="#"><img src="images\cycle.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Geared Cycles</p><h6>Upto 70% Off</h6></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="#"><img src="images\toy_01.webp" class="ps-5" style="height: 150px;"><p>Best of Action Toys</p><h6>Upto 70% Off</h6></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="#"><img src="images\stationery.webp" class="ps-5" style="height: 150px;"><p>Top Selling Stationery</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>49</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\food.webp" class="ps-5" style="height: 150px;"><p>Dry fruits</p><h6>Upto 70% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\toy_02.webp" class="ps-5" style="height: 150px;"><p>Remote Control Toys</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- SPORTS + HEALTHCARE -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Sports, Healthcare & more</h4>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_01.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Food Spreads</p><h6 style="text-align: center;">Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_02.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Honey</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_03.webp" class="ps-5" style="height: 150px;"><p>Musical Toys</p><h6>Under 199</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Tea Powder</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>Breakfast Cereal</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>Learning & Education...</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- HOME STYLE + NAVRATRI SPECIALS + SEASONS TOP -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <div class="col col-md-4 bg-secondary-subtle pe-4">
+                    <div class="row">
+                        <h4>Make your home stylish</h4>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_01.webp" class="ps-5" style="height: 150px;"><p>Home Temple</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_02.webp" class="ps-5" style="height: 150px;"><p>Collapsible Wardrobes</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_03.webp" class="ps-5" style="height: 150px;"><p>Stand</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_04.webp" class="ps-5" style="height: 150px;"><p>Beds</p><h6>Min.50% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle pe-4">
+                    <div class="row">
+                        <h4>Navaratri Specials</h4>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_01.webp" class="ps-5" style="height: 150px;"><p>Dry Fruit, Nut</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_02.webp" class="ps-5" style="height: 150px;"><p>Men's Kurtas</p><h6>Popular</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_03.webp" class="ps-5" style="height: 150px;"><p>Jewellery</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_04.webp" class="ps-5" style="height: 150px;"><p>Sweets</p><h6>Min.50% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle pe-3">
+                    <div class="row">
+                        <h4>Season's Top Picks</h4>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_01.webp" class="ps-5" style="height: 100px;"><p>Wrist Watches</p><h6>Min.90% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_02.webp" class="ps-5" style="height: 150px;"><p>Men's Slippers</p><h6>Min.70% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_03.webp" class="ps-5" style="height: 150px;"><p>Men's T-shirt</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_04.webp" class="ps-5" style="height: 150px;"><p> Laptop Bags</p><h6>Min.70% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- HOME DECOR + TRENDING GADGETS + HAIR SKIN -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <div class="col col-md-4 bg-secondary-subtle pe-4">
+                    <div class="row">
+                        <h4>Home Decor & Furnishings</h4>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_01.webp" class="ps-5" style="height: 150px;"><p>Home Temple</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_02.webp" class="ps-5" style="height: 150px;"><p>Collapsible Wardrobes</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_03.webp" class="ps-5" style="height: 150px;"><p>Stand</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col-md-6 border border-1">
+                            <a href="#"><img src="images\home_sty_04.webp" class="ps-5" style="height: 150px;"><p>Beds</p><h6>Min.50% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle pe-4">
+                    <div class="row">
+                        <h4>Trending Gadgets & Appliances</h4>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_01.webp" class="ps-5" style="height: 150px;"><p>Dry Fruit, Nut</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_02.webp" class="ps-5" style="height: 150px;"><p>Men's Kurtas</p><h6>Popular</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_03.webp" class="ps-5" style="height: 150px;"><p>Jewellery</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\navratri_04.webp" class="ps-5" style="height: 150px;"><p>Sweets</p><h6>Min.50% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle pe-3">
+                    <div class="row">
+                        <h4>Hair & Skin Care for Monsoon</h4>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_01.webp" class="ps-5" style="height: 100px;"><p>Wrist Watches</p><h6>Min.90% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_02.webp" class="ps-5" style="height: 150px;"><p>Men's Slippers</p><h6>Min.70% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_03.webp" class="ps-5" style="height: 150px;"><p>Men's T-shirt</p><h6>Min.50% Off</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                            <a href="#"><img src="images\deal_04.webp" class="ps-5" style="height: 150px;"><p> Laptop Bags</p><h6>Min.70% Off</h6></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- HOME DECOR + TRENDING GADGETS + HAIR SKIN -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row p-2">
+                <div class="col col-md-4 bg-secondary-subtle">
+                    <div class="row">
+                        <h4>Home Decor & Furnishings</h4>
+                        <div class="col-md-6 border border-1"><a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a></div>
+                        <div class="col-md-6 border border-1"><a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a></div>
+                        <div class="col-md-6 border border-1"><a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a></div>
+                        <div class="col-md-6 border border-1"><a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a></div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle">
+                    <div class="row">
+                        <h4>Trending Gadgets & Appliances</h4>
+                        <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a>
+                        </div>
+                        <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>fastrack Smartwatch</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>1399</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg-secondary-subtle">
+                    <div class="row">
+                        <h4>Hair & Skin Care for Monsoon</h4>
+                        <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Printers</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>7949</h6></a>
+                        </div>
+                         <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Printers</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>7949</h6></a>
+                        </div>
+                         <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Printers</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>7949</h6></a>
+                        </div>
+                         <div class="col col-md-6 border border-1">
+                        <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Printers</p><h6>From<i class="fa-solid fa-indian-rupee-sign"  style="color: #323232;"></i>7949</h6></a>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- FURNITURE DEALS -->
+        <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Furniture Deals</h4>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_01.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Food Spreads</p><h6 style="text-align: center;">Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_02.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Honey</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_03.webp" class="ps-5" style="height: 150px;"><p>Musical Toys</p><h6>Under 199</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Tea Powder</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>Breakfast Cereal</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>Learning & Education...</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FASHION TOP DEALS -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Fashion Top Deals</h4>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_01.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Food Spreads</p><h6 style="text-align: center;">Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_02.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Honey</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_03.webp" class="ps-5" style="height: 150px;"><p>Musical Toys</p><h6>Under 199</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Tea Powder</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>Breakfast Cereal</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>Learning & Education...</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- TOP DEALS -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Top Deals</h4>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_01.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Food Spreads</p><h6 style="text-align: center;">Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_02.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Honey</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_03.webp" class="ps-5" style="height: 150px;"><p>Musical Toys</p><h6>Under 199</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Tea Powder</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>Breakfast Cereal</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>Learning & Education...</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- PICK YOUR STYLE DEALS -->
+        <!-- <div class="container-fluid mt--1 py-1 px-4 Electronics bg-secondary-subtle">
+            <div class="row justift-content-center">
+                <h4 class="mt-4">Pick Your Styles</h4>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_01.webp" class="ps-5" style="height: 150px;"><p style="text-align: center;">Food Spreads</p><h6 style="text-align: center;">Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_02.webp" class="ps-5" style="height: 150px; width: 150px;"><p>Honey</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_03.webp" class="ps-5" style="height: 150px;"><p>Musical Toys</p><h6>Under 199</h6></a>
+                </div>
+                <div class="col col-md-2">
+                    <a href="#"><img src="images\healthc_04.webp" class="ps-5" style="height: 150px;"><p>Tea Powder</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_05.webp" class="ps-5" style="height: 150px;"><p>Breakfast Cereal</p><h6>Upto 75% Off</h6></a>
+                </div>
+                <div class="col col-md-1.5">
+                    <a href="#"><img src="images\healthc_06.webp" class="ps-5" style="height: 150px;"><p>Learning & Education...</p><h6>Upto 80% Off</h6></a>
+                </div>
+            </div>
+        </div> -->
+<img src="images\fashion_deal_01.webp" class="img-fluid" height="50px">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+		items.forEach((el) => {
+			const minPerSlide = 4
+			let next = el.nextElementSibling
+			for (var i=1; i<minPerSlide; i++) {
+				if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
+    </script>
+    </body>
+</html>
